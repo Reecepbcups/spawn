@@ -18,15 +18,13 @@ Spawn is the easiest way to build, maintain and scale a Cosmos SDK blockchain. S
 
 If you do not have [`go 1.22+`](https://go.dev/doc/install), [`Docker`](https://docs.docker.com/get-docker/), or [`git`](https://git-scm.com/) installed, follow the instructions below.
 
-* [MacOS](./docs/versioned_docs/version-v0.50.x/01-setup/01-system-setup.md#macos)
-* [Windows](./docs/versioned_docs/version-v0.50.x/01-setup/01-system-setup.md#windows)
-* [Ubuntu](./docs/versioned_docs/version-v0.50.x/01-setup/01-system-setup.md#linux-ubuntu)
+* [MacOS, Windows, and Ubuntu Setup](./docs/versioned_docs/version-v0.50.x/01-setup/01-system-setup.md)
 
 ### Install Spawn
 
 ```bash
 # Download the the Spawn repository
-git clone https://github.com/rollchains/spawn.git --depth=1 --branch v0.50.9
+git clone https://github.com/rollchains/spawn.git --depth=1 --branch v0.50.10
 cd spawn
 
 # Install Spawn
@@ -38,11 +36,11 @@ make get-localic
 # Attempt to run a command
 spawn help
 
-# Potential workaround if spawn is immediately killed when attempting run "spawn help" on a m* macbook. 
+# Potential workaround if spawn is immediately killed when attempting run "spawn help" on a m* macbook.
 # This may happen because of an xcode16 update.
-# To work around this as a temporary measure please change this line in the Make file. 
+# To work around this as a temporary measure please change this line in the Make file.
 LD_FLAGS = -X main.SpawnVersion=$(VERSION)
-# to 
+# to
 LD_FLAGS = -X main.SpawnVersion=$(VERSION) -s -w
 
 
